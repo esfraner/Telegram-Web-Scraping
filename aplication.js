@@ -24,7 +24,7 @@ const puppeteer = require('puppeteer');
         await browser.close();
     }
 
-    let [groupName] = await page.$x(`//div[@class="im_dialogs_col"]//ul[@class="nav nav-pills nav-stacked"]//div[@class="im_dialog_peer"]/span[text()="Sergi Estoestenis 2018"]`);
+    let [groupName] = await page.$x(`//div[@class="im_dialogs_col"]//ul[@class="nav nav-pills nav-stacked"]//div[@class="im_dialog_peer"]/span[text()="Selected group"]`);
     await groupName.click();
 
     await page.waitFor(3000);
@@ -45,7 +45,7 @@ const puppeteer = require('puppeteer');
     await page.waitFor(1000);
     await buttonEnviar.click();
 
-    const [chooseGroup] = await page.$x(`//ul[@class="im_dialogs_modal_list nav nav-pills nav-stacked"]//li[@class="im_dialog_wrap"]//div[@class="im_dialog_peer"]/span[text()="Apuestas Tenis"]`);
+    const [chooseGroup] = await page.$x(`//ul[@class="im_dialogs_modal_list nav nav-pills nav-stacked"]//li[@class="im_dialog_wrap"]//div[@class="im_dialog_peer"]/span[text()="Selected group2"]`);
     await page.waitFor(1000);
     await chooseGroup.click();
 
